@@ -109,9 +109,6 @@ body{
     border-radius: 30px;
     top: 0;
     min-width: 230px;
-    -webkit-max-height: 100px;
-    -moz-max-height: 100px;
-    max-height: 100px;
     -webkit-transform: translateY(-120%) scale(1);
     -moz-transform: translateY(-120%) scale(1);
     transform: translateY(-120%) scale(1);
@@ -125,9 +122,6 @@ body{
 }
 
 .emojis-deck.close{
-    -webkit-max-height: 0;
-    -moz-max-height: 0;
-    max-height: 0;
     -webkit-transform: translateY(0) scale(0);
     -moz-transform: translateY(0) scale(0);
     transform: translateY(0) scale(0);
