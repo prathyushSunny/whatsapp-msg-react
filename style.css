@@ -83,6 +83,8 @@ body{
 .me .react-cta{
     left: 0;
     top: 50%;
+    -webkit-transform: translate(-130%, -50%);
+    -moz-transform: translate(-130%, -50%);
     transform: translate(-130%, -50%);
 }
 
@@ -90,6 +92,8 @@ body{
     right: 0;
     top: 50%;
     transform: translate(130%, -50%);
+    -webkit-transform: translate(130%, -50%);
+    -moz-transform: translate(130%, -50%);
 }
 
 .emojis-deck{
@@ -102,18 +106,28 @@ body{
     border-radius: 30px;
     top: 0;
     width: 230px;
+    -webkit-max-height: 100px;
+    -moz-max-height: 100px;
     max-height: 100px;
+    -webkit-transform: translateY(-120%);
+    -moz-transform: translateY(-120%);
     transform: translateY(-120%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding-block: 2px;
     overflow: hidden;
+    -webkit-transition: 0.15s ease;
+    -moz-transition: 0.15s ease;
     transition: 0.15s ease;
     opacity: 1;
 }
 
 .emojis-deck.close{
     width: 0;
+    -webkit-max-height: 0;
+    -moz-max-height: 0;
     max-height: 0;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
     transform: translateY(0);
     padding: 0;
     opacity: 0;
@@ -127,11 +141,17 @@ body{
 .emojis-deck img{
     width: 25px;
     z-index: 5;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
     transition: 0.1s ease;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
     transform: scale(1);
 }
 
 .emojis-deck.close img{
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
     transform: scale(0);
 }
 
@@ -143,22 +163,32 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+    -moz-transform: translate(-50%, -50%) scale(0.7);
     transform: translate(-50%, -50%) scale(0.7);
     opacity: 0;
     border-radius: 100%;
     background: #2c3c45;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
     transition: 0.2s ease;
 }
 
 .emojis-deck div:hover::after, .emojis-deck div.active::after{
+    -webkit-transform: translate(-50%, -54%) scale(1);
+    -moz-transform: translate(-50%, -54%) scale(1);
     transform: translate(-50%, -54%) scale(1);
     opacity: 1;
 }
 
 .active-reaction{
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
     transition: 0.1s ease;
     position: absolute;
     bottom: 0;
+    -webkit-transform: translateY(50%) scale(0);
+    -moz-transform: translateY(50%) scale(0);
     transform: translateY(50%) scale(0);
     padding: 4px 6px 0 6px;
     border-radius: 40%;
@@ -168,20 +198,30 @@ body{
 }
 
 .active-reaction.active{
+    -webkit-transform: translateY(50%) scale(1);
+    -moz-transform: translateY(50%) scale(1);
     transform: translateY(50%) scale(1);
 }
 
 .active-reaction img{
     width: 17px;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
     transition: 0.1s ease;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
     transform: scale(0);
 }
 
 .active-reaction.active img{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
     transform: scale(1);
 }
 
 .active-reaction.active img.bump{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
     transform: scale(1.1);
 }
 
