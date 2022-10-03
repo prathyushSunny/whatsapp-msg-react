@@ -15,7 +15,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
+    outline: 0 !important;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
 }
 
@@ -33,7 +36,7 @@ body{
     background-size: cover;
     border-radius: 10px;
     min-height: 600px;
-    min-width: 400px;
+    min-width: 350px;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -105,13 +108,13 @@ body{
     padding-inline: 15px;
     border-radius: 30px;
     top: 0;
-    width: 230px;
+    min-width: 230px;
     -webkit-max-height: 100px;
     -moz-max-height: 100px;
     max-height: 100px;
-    -webkit-transform: translateY(-120%);
-    -moz-transform: translateY(-120%);
-    transform: translateY(-120%);
+    -webkit-transform: translateY(-120%) scale(1);
+    -moz-transform: translateY(-120%) scale(1);
+    transform: translateY(-120%) scale(1);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding-block: 2px;
     overflow: hidden;
@@ -122,13 +125,12 @@ body{
 }
 
 .emojis-deck.close{
-    width: 0;
     -webkit-max-height: 0;
     -moz-max-height: 0;
     max-height: 0;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(0) scale(0);
+    -moz-transform: translateY(0) scale(0);
+    transform: translateY(0) scale(0);
     padding: 0;
     opacity: 0;
 }
