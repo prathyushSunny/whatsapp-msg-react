@@ -68,18 +68,10 @@ $(document.body).ready(function(){
     function setActiveHover(){
         $('.emojis-deck div').map((idx, item) => {
             $(item).removeClass('active');
-            if (meActive == -1){
-                $(item).removeClass('active'); 
-            }
-            if (senderActive == -1){
-                $(item).removeClass('active');
-            }
-            if (meActive !== -1){
-                if (idx == meActive - 1) $(item).addClass('active');
-            }
-            if (senderActive !== -1){
-                if (idx == senderActive + emojisCount/2 - 1) $(item).addClass('active');
-            }
+            meActive == -1 && ($(item).removeClass('active'))
+            senderActive == -1 && ($(item).removeClass('active'))
+            meActive !== -1 && (idx == meActive - 1) && ($(item).addClass('active'))
+            senderActive !== -1 && (idx == senderActive + emojisCount/2 - 1) && $(item).addClass('active')
         });
     }
 });
